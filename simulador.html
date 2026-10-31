@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Simulador · Mapas de Karnaugh</title>
+<link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+<div class="top"><div class="w"><nav>
+ <b>Mapas de Karnaugh</b>
+ <a href="index.html">Inicio</a><a href="simulador.html" aria-current="page">Simulador</a>
+ <button id="th" aria-label="Cambiar entre tema claro y oscuro">Tema</button>
+</nav></div></div>
+
+<main class="w">
+<div class="sim">
+ <header class="sim-head">
+  <p class="eyebrow">Herramienta interactiva</p>
+  <h1>Simulador de mapas de Karnaugh</h1>
+  <p>Define la función, observa cómo se agrupan los unos y copia la expresión mínima con su circuito lógico.</p>
+ </header>
+
+ <div class="layout">
+  <aside class="side">
+   <section class="panel">
+    <div class="ph"><h2>Configuración</h2></div>
+    <div class="field"><p class="lbl">Variables</p><div class="seg" id="nv"></div></div>
+    <div class="field"><p class="lbl">Forma de la expresión</p><div class="seg" id="md"><button data-m="sop" aria-pressed="true">SOP (Σ)</button><button data-m="pos" aria-pressed="false">POS (Π)</button></div></div>
+    <div class="field"><label class="lbl" for="mi">Minitérminos (1)</label><input type="text" id="mi" inputmode="numeric" placeholder="ej. 0,1,5,7" autocomplete="off"></div>
+    <div class="field"><label class="lbl" for="di">Indiferentes (X)</label><input type="text" id="di" inputmode="numeric" placeholder="ej. 12,13" autocomplete="off"></div>
+    <div class="act"><button id="ex" class="pri">Cargar ejemplo</button><button id="rn">Función aleatoria</button><button id="cl">Limpiar</button></div>
+   </section>
+  </aside>
+
+  <div class="main">
+   <section class="panel">
+    <div class="ph"><h2>Mapa de Karnaugh</h2>
+     <div class="legend"><span><i class="lg v1"></i>1</span><span><i class="lg v0"></i>0</span><span><i class="lg vx"></i>X</span></div></div>
+    <div class="maps" id="maps"></div>
+    <p class="hint">Toca una celda para alternar entre 0, 1 y X. El número pequeño es el minitérmino y los puntos de color indican su grupo.</p>
+   </section>
+
+   <section class="panel">
+    <div class="ph"><h2 id="rl"></h2><button id="cp" class="mini">Copiar</button></div>
+    <div class="res" id="res"></div>
+    <div class="chips" id="chips"></div>
+    <div class="st" id="st"></div>
+   </section>
+
+   <section class="panel"><div class="ph"><h2>Circuito lógico</h2></div><div class="cir" id="cir"></div></section>
+   <section class="panel"><details><summary>Tabla de verdad</summary><div class="tw" id="tt"></div></details></section>
+  </div>
+ </div>
+</div>
+</main>
+<footer><div class="w">Simulador de mapas de Karnaugh · Proyecto académico</div></footer>
+<script src="js/tema.js"></script>
+<script src="js/simulador.js"></script>
+</body>
+</html>

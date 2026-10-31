@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es" class="home">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Mapas de Karnaugh · Inicio</title>
+<link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+<div class="top"><div class="w"><nav>
+ <b>Mapas de Karnaugh</b>
+ <a href="index.html" aria-current="page">Inicio</a><a href="simulador.html">Simulador</a>
+ <button id="th" aria-label="Cambiar entre tema claro y oscuro">Tema</button>
+</nav></div></div>
+
+<!-- ESCENARIO: la portada queda fija y la siguiente seccion la barre al desplazarse -->
+<div class="stage" id="stage">
+ <div class="stick">
+<!-- PORTADA: video al fondo + capa semitransparente al frente -->
+<header class="hero" id="hero">
+ <video id="bv" class="bgv" autoplay muted loop playsinline preload="auto" aria-label="George Boole explica qué es el álgebra booleana"></video>
+ <div class="veil"></div>
+ <div class="hero-in w">
+  <p class="eyebrow">Proyecto académico · Álgebra booleana</p>
+  <h1>Simulador de mapas de Karnaugh</h1>
+  <p class="lead">Representa funciones booleanas de 2 a 5 variables, observa cómo se agrupan los unos y obtén la expresión mínima con su circuito lógico.</p>
+  <div class="cta">
+   <a class="btn light" href="simulador.html">Entrar al simulador</a>
+   <a class="btn ghost" href="#info">Cómo funciona</a>
+  </div>
+ </div>
+ <div class="bar">
+  <a class="cue" href="#info"><span>Desliza para ver más</span><i></i></a>
+  <div class="ctl">
+   <button class="cbtn" id="clr" aria-pressed="false">Ver sin capa</button>
+   <button class="cbtn" id="pp">Pausar</button>
+   <button class="cbtn" id="snd" aria-pressed="false">Activar sonido</button>
+  </div>
+ </div>
+</header>
+
+  <section class="wipe" id="wipe" aria-label="Nuestro objetivo">
+   <div class="w"><div class="two">
+  <h2>Nuestro objetivo</h2>
+  <div>
+   <p>Facilitar el aprendizaje de la simplificación de funciones booleanas mediante una herramienta visual que se pueda usar desde cualquier dispositivo, sin instalar nada.</p>
+   <ul class="o">
+    <li>Representar funciones de 2, 3, 4 y 5 variables en su mapa de Karnaugh.</li>
+    <li>Mostrar las agrupaciones que dan la expresión mínima, en forma SOP y POS.</li>
+    <li>Verificar automáticamente que la expresión obtenida coincide con la función original.</li>
+    <li>Dibujar el circuito de compuertas correspondiente.</li>
+   </ul>
+   <p style="margin-top:18px"><a class="btn" href="simulador.html">Entrar al simulador</a></p>
+  </div>
+ </div></div>
+  </section>
+ </div>
+</div>
+
+<main class="w">
+
+ <section class="b two">
+  <h2>Cómo se usa</h2>
+  <ol class="steps">
+   <li><div><b>Elige el número de variables</b>De 2 a 5. Con 5 variables el mapa se divide en dos tableros, uno para A = 0 y otro para A = 1.</div></li>
+   <li><div><b>Define la función</b>Toca las celdas para alternar entre 0, 1 y X (indiferente), o escribe los minitérminos en los campos de texto. También puedes editar la tabla de verdad.</div></li>
+   <li><div><b>Lee el resultado</b>Los grupos aparecen marcados con colores y la expresión simplificada se muestra debajo del mapa. Toca un grupo para resaltarlo.</div></li>
+   <li><div><b>Compara y comprueba</b>Cambia entre SOP y POS, revisa el circuito y confirma que el indicador de verificación esté correcto.</div></li>
+  </ol>
+ </section>
+
+ <section class="b two">
+  <h2>Conceptos clave</h2>
+  <dl>
+   <dt>Minitérmino</dt><dd>Cada combinación de entradas para la cual la función vale 1. El número pequeño de cada celda es su índice.</dd>
+   <dt>Indiferente (X)</dt><dd>Combinación que no importa o no ocurre. Se puede usar como 1 si ayuda a formar un grupo mayor.</dd>
+   <dt>Grupo</dt><dd>Rectángulo de 1, 2, 4, 8 o 16 celdas adyacentes. Cuanto más grande, menos literales tiene el término.</dd>
+   <dt>SOP y POS</dt><dd>Suma de productos (agrupando los 1) y producto de sumas (agrupando los 0).</dd>
+   <dt>Código Gray</dt><dd>Orden 00, 01, 11, 10 en los bordes del mapa, de modo que celdas vecinas solo difieren en una variable.</dd>
+  </dl>
+  <p class="note">Los bordes del mapa son adyacentes entre sí: un grupo puede salir por la derecha y continuar por la izquierda. En 5 variables también hay adyacencia entre los dos tableros.</p>
+ </section>
+
+ <section class="b">
+  <a class="btn" href="simulador.html">Ir al simulador</a>
+ </section>
+</main>
+<footer><div class="w">Simulador de mapas de Karnaugh · Proyecto académico</div></footer>
+<script src="js/tema.js"></script>
+<script src="js/inicio.js"></script>
+</body>
+</html>

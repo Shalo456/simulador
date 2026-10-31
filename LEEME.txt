@@ -1,0 +1,22 @@
+SIMULADOR DE MAPAS DE KARNAUGH (2 a 5 variables)
+
+Estructura:
+  index.html        Pagina de bienvenida
+  simulador.html    Simulador
+  css/estilos.css   Estilos
+  js/tema.js        Tema claro/oscuro
+  js/simulador.js   Logica (Quine-McCluskey, mapa, circuito)
+
+Como abrirlo en Visual Studio Code:
+  1. Descomprime el zip.
+  2. Archivo > Abrir carpeta... y elige la carpeta del proyecto.
+  3. Abre index.html y presiona clic derecho > Open with Live Server
+     (extension Live Server de Ritwick Dey) o simplemente doble clic en index.html.
+
+Para subirlo a GitHub Pages: sube todo el contenido de la carpeta a un repositorio
+y activa Settings > Pages (rama main, carpeta raiz).
+
+PORTADA CON VIDEO
+  Guarda los videos en la carpeta video/ (ver video/LEEME-VIDEO.txt).
+  El video se reproduce solo y en bucle. Los navegadores bloquean el sonido automatico hasta que la
+  persona toca o hace clic; por eso arranca en silencio y se activa con el primer toque (o con el boton).
